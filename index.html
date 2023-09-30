@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    console.log("Hello, World!")
+
+    function showMessage() {
+      alert( 'Hello everyone!' );
+    }
+    showMessage()
+
+    function sayHi() {
+      alert( "Hello" );
+    }
+
+    alert( sayHi ); // shows the function code, does NOT call the function
+
+    sayHi()
+
+    let sum = (a, b) => a + b;
+
+      /* This arrow function is a shorter form of:
+        let sum = function(a, b) {
+        return a + b;
+        };
+        */
+
+  alert( sum(1, 2) ); // 3
+
+/* Functions */
+function add7 (){
+  addnum = 8
+  result=addnum+7
+  return result;
+}
+
+function capitalize(){
+  input="hello, the cat is outSiDE"
+  stage1=input.toLowerCase()
+  stage2=stage1.slice(0,1)
+  output=stage2.toUpperCase()+stage1.replace(stage2,'')
+  return output
+}
+
+function findLastLetter(){
+  texttouse="gvsbjfhuygejn"
+  finalPosition=texttouse.length-1
+  alert(texttouse.charAt(finalPosition))
+}
+
+add7()
+alert(result)
+
+capitalize()
+alert(output)
+
+findLastLetter()
+
+
+
+  </script>
+</body>
+</html>
