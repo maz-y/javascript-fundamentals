@@ -1,68 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM</title>
 </head>
+<!-- your HTML file: -->
 <body>
-  <script>
-    // Your JavaScript goes here!
-    console.log("Hello, World!")
-
-    function showMessage() {
-      alert( 'Hello everyone!' );
-    }
-    showMessage()
-
-    function sayHi() {
-      alert( "Hello" );
-    }
-
-    alert( sayHi ); // shows the function code, does NOT call the function
-
-    sayHi()
-
-    let sum = (a, b) => a + b;
-
-      /* This arrow function is a shorter form of:
-        let sum = function(a, b) {
-        return a + b;
-        };
-        */
-
-  alert( sum(1, 2) ); // 3
-
-/* Functions */
-function add7 (){
-  addnum = 8
-  result=addnum+7
-  return result;
-}
-
-function capitalize(){
-  input="hello, the cat is outSiDE"
-  stage1=input.toLowerCase()
-  stage2=stage1.slice(0,1)
-  output=stage2.toUpperCase()+stage1.replace(stage2,'')
-  return output
-}
-
-function findLastLetter(){
-  texttouse="gvsbjfhuygejn"
-  finalPosition=texttouse.length-1
-  alert(texttouse.charAt(finalPosition))
-}
-
-add7()
-alert(result)
-
-capitalize()
-alert(output)
-
-findLastLetter()
-
-
-
-  </script>
+  <h1>
+    THE TITLE OF YOUR WEBPAGE
+  </h1>
+  <div id="container"></div>
 </body>
+
+<script>
+  const container = document.querySelector('#container');
+  const content = document.createElement('div');
+  content.classList.add('content');
+  content.textContent = 'This is the glorious text-content!';
+  container.appendChild(content);
+
+  const addition2 = document.createElement('p');
+  addition2.textContent = "Hey I'm red!"
+  addition2.style.color = "red"
+  container.appendChild(addition2);
+
+  const addition3 = document.createElement('h3');
+  addition3.textContent = "Hey I'm blue!"
+  addition3.style.color = "blue"
+  container.appendChild(addition3);
+
+  const container2 = document.createElement('div');
+  container2.setAttribute('style', 'border: black 5px; background-color: pink;')
+  container.appendChild(container2);
+
+  const addition4 = document.createElement('h1')
+  addition4.textContent = "Hi, I'm in a div!"
+  container2.appendChild(addition4)
+
+  const addition5 = document.createElement('p');
+  addition5.textContent = "Me too!"
+  container2.appendChild(addition5);
+
+
+
+</script>
 </html>
